@@ -1,0 +1,13 @@
+{
+  "size": 1,
+  "sort": [{ "@timestamp": { "order": "desc" } }],
+  "_source": false,
+  "query": {
+    "bool": {
+      "filter": [
+        { "range": { "@timestamp": { "gte": "now-1h", "lte": "now" } } },
+        { "term": { "rule.id": "60110" } }
+      ]
+    }
+  }
+}
