@@ -21,13 +21,13 @@
 ## 三、實作成果（重點）
 1. ✅ 確認 Wazuh API 連線正常（health/summary 可回應）
 2. ✅ 取得 agents 清單（至少包含 manager 本機與 Windows agent）
-3. ✅ 於 OpenSearch 列出 alerts 索引並確認最新索引（例：wazuh-alerts-4.x-YYYY.MM.DD）
-4. ✅ 查詢最近 1 小時告警 Top 10，整理欄位（時間、rule、level、agent、decoder、location 等）
+3. ✅ 於 OpenSearch 列出 alerts 索引並確認最新索引（例：wazuh-alerts-4.x-YYYY.MM.DD）| ![](./1.png) | ![](./2.png) |
+4. ✅ 查詢最近 1 小時告警 Top 10，整理欄位（時間、rule、level、agent、decoder、location 等）![](./3.png)
 5. ✅ 針對特定規則（例：rule.id=60110）取得最新事件：
    - 先查 _id（size=1 / sort desc）
-   - 再用 get_document 取得完整 _source
-6. ✅ 以特定事件時間為中心，建立前後 5 分鐘事件時間線（timeline）
-7. ✅ 統計最近 24 小時 rule.id=60110 在指定 agent 的觸發次數與最近事件列表
+   - 再用 get_document 取得完整 _source![](./5.png)![](./6.png)
+6. ✅ 以特定事件時間為中心，建立前後 5 分鐘事件時間線（timeline）![](./7.png)
+7. ✅ 統計最近 24 小時 rule.id=60110 在指定 agent 的觸發次數與最近事件列表![](./10.png)
 
 ---
 
